@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: beauty-salon-booking-backend
+
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE}
+
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
