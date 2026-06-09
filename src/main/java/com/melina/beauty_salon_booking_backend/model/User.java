@@ -1,7 +1,6 @@
 package com.melina.beauty_salon_booking_backend.model;
 
 
-import com.melina.beauty_salon_booking_backend.security.model.RolUsuario;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -32,13 +31,7 @@ public class User {
 
     private String email;
 
-    private String password;
-
     private Boolean activo;
 
-    private String rol;
-
-    @Enumerated(EnumType.STRING)
-    private RolUsuario rolUsuario;
 }
 
