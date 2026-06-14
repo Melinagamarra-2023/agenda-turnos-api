@@ -14,7 +14,24 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @SuperBuilder
-public class Professional extends User {
+public class Professional {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    private String lastname;
+
+    private String dni;
+
+    private String address;
+
+    private String phone;
+
+
+    private Boolean activo;
+
     private String especialidad;
 
     @ManyToMany

@@ -8,10 +8,10 @@ import java.util.List;
 public interface ClientService {
 
     ClientResponseDto createClient(ClientRequestDto request);
-    ClientResponseDto getClientById(Long id);
+    ClientResponseDto getClientByCuit(String cuit);
     List<ClientResponseDto> getAllClients();
-    ClientResponseDto updateClient(Long id, ClientRequestDto request);
-    void deleteClient(Long id);
+    ClientResponseDto updateClient(String cuit, ClientRequestDto request);
+    void deleteClient(String cuit);
     ClientResponseDto getClientByDni(String dni);
     ClientResponseDto getClientByEmail(String email);
     ClientResponseDto enableClient(Long id);

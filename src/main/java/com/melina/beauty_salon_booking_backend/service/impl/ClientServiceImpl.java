@@ -29,9 +29,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientResponseDto getClientById(Long id) {
-        Client client = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Client not found with id: " + id));
+    public ClientResponseDto getClientByCuit(String cuit) {
+        Client client = repository.findByCuit(cuit)
+                .orElseThrow(() -> new RuntimeException("Client not found with cuit: " + cuit));
         return clientMapper.toDto(client);
     }
 
@@ -44,9 +44,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientResponseDto updateClient(Long id, ClientRequestDto request) {
-        Client clientUpdate = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Client not found with id: " + id));
+    public ClientResponseDto updateClient(String cuit, ClientRequestDto request) {
+        Client clientUpdate = repository.findByCuit(cuit)
+                .orElseThrow(() -> new RuntimeException("Client not found with cuit_: " + cuit));
 
         clientUpdate.setName(request.getName());
         clientUpdate.setLastname(request.getLastname());
@@ -59,9 +59,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void deleteClient(Long id) {
-        Client clientDelete = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Client not found with id: " + id));
+    public void deleteClient(String cuit) {
+        Client clientDelete = repository.findByCuit(cuit)
+                .orElseThrow(() -> new RuntimeException("Client not found with cuit: " + cuit));
         repository.delete(clientDelete);
 
     }
@@ -69,7 +69,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public ClientResponseDto getClientByDni(String dni) {
         Client client = repository.findByDni(dni)
-                .orElseThrow(() -> new RuntimeException("Client not found with dni: " + dni));
+                .orElseThrow(() -> new RuntimeException("Client not found with dni9: " + dni));
         return clientMapper.toDto(client);
     }
 

@@ -12,3 +12,7 @@ spring:
     defer-datasource-initialization: true
     hibernate:
       ddl-auto: update
+
+
+jwt:
+  secret: ${SECRET_KEY}

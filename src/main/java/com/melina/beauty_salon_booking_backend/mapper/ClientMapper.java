@@ -16,7 +16,6 @@ public class ClientMapper {
                 .dni(entity.getDni())
                 .address(entity.getAddress())
                 .phone(entity.getPhone())
-                .email(entity.getEmail())
                 .activo(entity.getActivo())
                 .build();
     }
@@ -28,7 +27,6 @@ public class ClientMapper {
                 .dni(dto.getDni())
                 .address(dto.getAddress())
                 .phone(dto.getPhone())
-                .email(dto.getEmail())
                 .build();
     }
 }
