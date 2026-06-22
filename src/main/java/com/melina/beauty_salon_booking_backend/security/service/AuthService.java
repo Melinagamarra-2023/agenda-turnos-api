@@ -77,6 +77,8 @@ public class AuthService {
                 clientDto.setPhone(request.getPhone());
                 clientDto.setAddress(request.getAddress());
                 clientDto.setEmail(request.getEmail());
+                clientDto.setCuit(request.getCuit());
+                clientDto.setActivo(true);
                 clientService.createClient(clientDto);
             }
         }

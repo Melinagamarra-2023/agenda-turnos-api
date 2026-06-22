@@ -1,12 +1,14 @@
 package com.melina.beauty_salon_booking_backend.dto;
 
-
+import com.melina.beauty_salon_booking_backend.model.Service;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
-public class ClientRequestDto{
+public class ProfessionalRequestDto {
 
     private Long id;
 
@@ -24,6 +26,7 @@ public class ClientRequestDto{
 
     private String cuit;
 
-    private Boolean activo;
+    private List<Service> services;
 
+    private Boolean activo;
 }

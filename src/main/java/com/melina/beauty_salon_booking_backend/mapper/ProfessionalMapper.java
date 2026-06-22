@@ -1,15 +1,17 @@
 package com.melina.beauty_salon_booking_backend.mapper;
 
-import com.melina.beauty_salon_booking_backend.dto.ClientRequestDto;
+
 import com.melina.beauty_salon_booking_backend.dto.ClientResponseDto;
-import com.melina.beauty_salon_booking_backend.model.Client;
+import com.melina.beauty_salon_booking_backend.dto.ProfessionalRequestDto;
+import com.melina.beauty_salon_booking_backend.dto.ProfessionalResponseDto;
+import com.melina.beauty_salon_booking_backend.model.Professional;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ClientMapper {
+public class ProfessionalMapper {
 
-    public ClientResponseDto toDto(Client entity) {
-        return ClientResponseDto.builder()
+    public ProfessionalResponseDto toDto(Professional entity) {
+        return ProfessionalResponseDto.builder()
                 .id(entity.getId())
                 .name(entity.getName())
                 .lastname(entity.getLastname())
@@ -22,8 +24,8 @@ public class ClientMapper {
                 .build();
     }
 
-    public Client toEntity(ClientRequestDto dto) {
-        return Client.builder()
+    public Professional toEntity(ProfessionalRequestDto dto) {
+        return Professional.builder()
                 .name(dto.getName())
                 .lastname(dto.getLastname())
                 .dni(dto.getDni())

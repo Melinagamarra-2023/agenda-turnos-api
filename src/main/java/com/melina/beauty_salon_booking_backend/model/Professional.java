@@ -29,6 +29,9 @@ public class Professional {
 
     private String phone;
 
+    private String cuit;
+
+    private String email;
 
     private Boolean activo;
 
